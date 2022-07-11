@@ -2,7 +2,6 @@ package com.nikp.captcha;
 
 import java.net.URI;
 import java.util.HashMap;
-import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,12 +30,7 @@ public class CaptchaService extends AbstractCaptchaService {
     
     @Override
     public void processResponse(final String response) {
-    	Random r = new Random();
-    	int low = 10;
-    	int high = 100;
-    	int randomNumber = r.nextInt(high-low) + low;
-    	
-    	System.out.println(randomNumber);
+
         /**
          * Define you target on which you would like to evaluate the featureFlag 
 	 * Builds a target using specific key value pairs. This target can then be used by rules to evalue the flag
