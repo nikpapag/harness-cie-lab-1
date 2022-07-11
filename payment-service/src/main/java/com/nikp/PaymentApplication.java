@@ -1,7 +1,6 @@
 package com.nikp;
 
-import io.harness.cf.client.api.CfClient;
-import io.harness.cf.client.api.Config;
+
 import io.prometheus.client.CollectorRegistry;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
@@ -39,15 +38,7 @@ public class PaymentApplication {
    
     }
 
-    
-    @Bean
-    public CfClient cfClient() {
-
-    	 CfClient cfClient =
-    	            new CfClient(this.apiKey, Config.builder().build());
-    	 return cfClient;
-    }
-    
+   
     @Bean
     public CaptchaService captchaService() {
     	return new CaptchaService();
