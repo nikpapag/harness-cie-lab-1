@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RemoteRepositoriesConfiguration">
+    <remote-repository>
+      <option name="id" value="repository.springframework.maven.milestone" />
+      <option name="name" value="Spring Framework Maven Milestone Repository" />
+      <option name="url" value="http://repo.spring.io/libs-milestone" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="parent" />
+      <option name="name" value="parent" />
+      <option name="url" value="https://maven.pkg.github.com/gsi-io/gsi-parent" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="gsi-artifactory-release" />
+      <option name="name" value="gsi-artifactory-release" />
+      <option name="url" value="http://artifactory.gsi.io/artifactory/gsi-release-local" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="base" />
+      <option name="name" value="base" />
+      <option name="url" value="https://maven.pkg.github.com/gsi-io/mesh-node-igp-base" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="gsi-artifactory-snapshot" />
+      <option name="name" value="gsi-artifactory-snapshot" />
+      <option name="url" value="http://artifactory.gsi.io/artifactory/gsi-snapshot-local" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="central" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="pushgaming-artifactory" />
+      <option name="name" value="Pushgaming Repository" />
+      <option name="url" value="https://pushgaming.mycloudrepo.io/repositories/platform" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="commons" />
+      <option name="name" value="commons" />
+      <option name="url" value="https://maven.pkg.github.com/gsi-io/gsi-commons" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ext-release-local" />
+      <option name="name" value="ext-release-local" />
+      <option name="url" value="http://artifactory.gsi.io/artifactory/ext-release-local" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-milestones" />
+      <option name="name" value="Spring Milestones" />
+      <option name="url" value="https://repo.spring.io/milestone" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="jboss.community" />
+      <option name="name" value="JBoss Community repository" />
+      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-snapshots" />
+      <option name="name" value="Spring Snapshots" />
+      <option name="url" value="https://repo.spring.io/snapshot" />
+    </remote-repository>
+  </component>
+</project>

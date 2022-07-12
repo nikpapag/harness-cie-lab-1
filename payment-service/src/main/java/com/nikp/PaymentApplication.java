@@ -19,6 +19,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.nikp.captcha.CaptchaService;
 import com.nikp.payment.api.PaymentService;
+import io.harness.cf.client.api.CfClient;
+import io.harness.cf.client.api.Config;
 
 
 @SpringBootApplication
@@ -82,4 +84,11 @@ public class PaymentApplication {
         CollectorRegistry.defaultRegistry.clear();
     }
 
+
+    @Bean
+    public CfClient cfClient() {
+        CfClient cfClient =
+                new CfClient(this.apiKey, Config.builder().build());
+        return cfClient;
+    }
 }

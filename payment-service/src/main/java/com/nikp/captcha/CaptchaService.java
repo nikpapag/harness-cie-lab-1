@@ -14,6 +14,9 @@ import com.nikp.PaymentApplication;
 import com.nikp.payment.infrastructure.exceptions.BankValidationException;
 import com.nikp.payment.infrastructure.exceptions.ReCaptchaInvalidException;
 import com.nikp.payment.infrastructure.exceptions.ReCaptchaUnavailableException;
+import io.harness.cf.client.api.CfClient;
+import io.harness.cf.client.api.Config;
+import io.harness.cf.client.dto.Target;
 
 
 
@@ -23,6 +26,8 @@ public class CaptchaService extends AbstractCaptchaService {
 
     private final static Logger LOGGER = LoggerFactory.getLogger(CaptchaService.class);
 
+    @Autowired
+    private CfClient cfClient;
 
     
 	@Value("${harness.se}" )
@@ -35,16 +40,23 @@ public class CaptchaService extends AbstractCaptchaService {
          * Define you target on which you would like to evaluate the featureFlag 
 	 * Builds a target using specific key value pairs. This target can then be used by rules to evalue the flag
          */
-    
 
-       
-       
-       boolean result = false;
+        Target target = Target.builder()
+                .name(targetName)
+                .identifier(targetName)
+                .attributes(new HashMap<String, Object>())
+                .build();
 
-    /**
-     *  This piece of code is the actual evaluation of the feature flag
-     *  Uncomment the three lines below in order to start validating - Enable/Disable feature flag from the UI
-     */
+
+
+
+        boolean result = cfClient.boolVariation("bankvalidation", target, false);
+
+
+        /**
+         *  This piece of code is the actual evaluation of the feature flag
+         *  Uncomment the three lines below in order to start validating - Enable/Disable feature flag from the UI
+         */
       if(result) {
     	   throw new BankValidationException("You have been selected for further bank validation, please call your bank");
        }
