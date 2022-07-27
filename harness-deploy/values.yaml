@@ -18,6 +18,7 @@ servicePort: 8080
 serviceTargetPort: 8080
 
 #Templatise this using harness variables.
+#testing
 sename: <+pipeline.variables.seusername>
 
 # Specify all environment variables to be added to the container.
